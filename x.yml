@@ -1,0 +1,15 @@
+# environment.yml
+name: translator_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - streamlit
+  - speechrecognition
+  - google-cloud-translate
+  - langdetect
+  - pydub            # MP3→WAV conversion
+  - ffmpeg           # backend for pydub
+  - pip
+  - pip:
+      - deep-translator
