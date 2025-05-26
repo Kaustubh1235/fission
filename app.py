@@ -2,12 +2,7 @@ import streamlit as st
 ###
 import os, json, tempfile, streamlit as st
 
-if "GOOGLE_APPLICATION_CREDENTIALS_JSON" in st.secrets:
-    sa_json = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
-    with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".json") as tmp:
-        tmp.write(sa_json)
-        cred_path = tmp.name
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = cred_path
+
 from deep_translator import GoogleTranslator
 ##as sir metioned
 import speech_recognition as sr
